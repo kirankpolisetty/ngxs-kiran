@@ -9,6 +9,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
+import {NgxsModule} from "@ngxs/store";
+import {TodoState} from "./store/todo-state";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [TodoListComponent],
@@ -22,6 +25,11 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatListModule,
     MatCheckboxModule,
+    RouterModule.forChild([{
+      path: '',
+      component: TodoListComponent,
+    }]),
+    NgxsModule.forFeature([TodoState]),
   ],
   exports: [TodoListComponent],
 })

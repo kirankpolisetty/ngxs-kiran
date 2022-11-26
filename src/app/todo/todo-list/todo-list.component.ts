@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { AddItemAction, ToggleItemAction } from '../todo-actions';
-import { TodoSelectors } from '../todo-selectors';
+import { AddItemAction, ToggleItemAction } from '../store/todo-actions';
+import { TodoSelectors } from '../store/todo-selectors';
 import { TodoModel } from '../types/todo';
 
 @Component({

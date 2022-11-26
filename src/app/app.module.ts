@@ -5,7 +5,7 @@ import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoState } from './todo/todo-state';
+import { TodoState } from './todo/store/todo-state';
 import { TodoModule } from './todo/todo.module';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { TodoModule } from './todo/todo.module';
     BrowserModule,
     AppRoutingModule,
     TodoModule,
-    NgxsModule.forRoot([TodoState], {
+    NgxsModule.forRoot([], {
       developmentMode: !environment.production,
     }),
   ],
